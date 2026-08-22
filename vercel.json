@@ -1,7 +1,7 @@
 {
   "framework": null,
-  "buildCommand": "npm run build",
-  "outputDirectory": "theme",
+  "buildCommand": null,
+  "outputDirectory": "src",
   "cleanUrls": true,
   "headers": [
     {
