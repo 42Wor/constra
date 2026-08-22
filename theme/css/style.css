@@ -515,7 +515,7 @@ a[href^=tel] {
 }
 @media (max-width: 767px) {
   .btn-primary,
-.btn-dark {
+  .btn-dark {
     font-size: 13px;
   }
 }
@@ -939,7 +939,7 @@ ul.navbar-nav > li > a i {
     color: #fff;
   }
   .header-two ul.navbar-nav > li.active > a i,
-.header-two ul.navbar-nav > li > a.active i {
+  .header-two ul.navbar-nav > li > a.active i {
     color: #ffb600;
   }
 }
@@ -2849,7 +2849,7 @@ img.testimonial-thumb {
 
 /* Pricing featured */
 .ts-pricing-box.ts-pricing-featured .ts-pricing-header {
-  background: #ff9800;
+  background: rgb(100%, 59.7058823529%, 0%);
 }
 
 /* Contact Us

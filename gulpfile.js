@@ -168,10 +168,13 @@ gulp.task(
 gulp.task(
   "build",
   gulp.series(
+    "clean",
     "html:build",
     "js:build",
     "scss:build",
     "images:build",
-    "plugins:build"
+    "plugins:build",
+    "others:build"
   )
 );
+
