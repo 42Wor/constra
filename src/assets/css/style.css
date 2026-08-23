@@ -3366,4 +3366,21 @@ label {
   margin-top: 30px;
   font-weight: 700;
 }
+
+/* Mobile Header Tweaks */
+@media (max-width: 767px) {
+  .header-one .logo-area {
+    padding: 15px 0 10px;
+  }
+  .logo h2 {
+    font-size: 26px;
+  }
+  ul.top-info-box li.header-get-a-quote {
+    margin-top: 10px;
+  }
+  ul.top-info-box li.header-get-a-quote .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
