@@ -63,6 +63,7 @@ a[href^=tel] { color: inherit; text-decoration: none; }
 section, .section-padding {
   padding: 70px 0;
   position: relative;
+  clear: both;
 }
 
 .no-padding { padding: 0; }
@@ -116,10 +117,6 @@ section, .section-padding {
   color: #212121;
 }
 
-@media (max-width: 575px) {
-  .section-sub-title { font-size: 28px; margin-bottom: 30px; }
-}
-
 /* ==========================================================================
    Buttons
    ========================================================================== */
@@ -141,13 +138,9 @@ section, .section-padding {
   gap: 8px;
 }
 
-@media (max-width: 767px) {
-  .btn-primary, .btn-dark { font-size: 13px; }
-}
-
 .btn-white.btn-primary { background: #fff; color: #ffb600; }
 .btn-primary { background: #ffb600; color: #111; }
-.btn-dark { background: #23282d; }
+.btn-dark { background: #111827; color: #fff; }
 
 .btn-primary:hover, .btn-dark:hover, .btn-white.btn-primary:hover {
   background: #111;
@@ -217,20 +210,21 @@ section, .section-padding {
   color: #ffb600;
 }
 
-/* Mobile Quick Dial Bar */
+/* Mobile Slim Top Bar */
 .mobile-call-bar {
   background: #ffb600;
   color: #111;
-  padding: 9px 0;
+  padding: 6px 0;
   text-align: center;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: 0.2px;
 }
 .mobile-call-bar a {
   color: #111;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 /* ==========================================================================
@@ -240,27 +234,35 @@ section, .section-padding {
   background: #fff;
 }
 
-.header-one .logo-area {
-  padding: 24px 0;
+.header-main-bar {
+  padding: 18px 0;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.logo img {
-  display: inline-block;
+.site-logo-text {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #111827;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.header-right {
-  float: right;
+.site-logo-text .text-accent {
+  color: #ffb600;
 }
 
 .top-info-box {
-  float: right;
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 .top-info-box > li {
-  float: left;
   margin-left: 20px;
   border-right: 1px solid #dedede;
   padding-right: 20px;
@@ -269,10 +271,6 @@ section, .section-padding {
 .top-info-box > li:last-child {
   border-right: 0;
   padding-right: 0;
-}
-
-.top-info-box > li.last {
-  border-right: 0;
 }
 
 .top-info-box li .info-box {
@@ -336,13 +334,15 @@ section, .section-padding {
 }
 
 .navbar-toggler {
-  float: right;
-  border: 0;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background: #ffb600;
-  border-radius: 0;
+  border: 0 !important;
+  padding: 8px 12px !important;
+  background: #111827 !important;
+  border-radius: 4px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none !important;
 }
 
 .navbar-toggler .navbar-toggler-icon {
@@ -351,7 +351,7 @@ section, .section-padding {
   display: inline-block;
   width: 20px;
   height: 2px;
-  background-color: #fff;
+  background-color: #ffffff;
   vertical-align: middle;
 }
 
@@ -362,7 +362,7 @@ section, .section-padding {
   left: 0;
   width: 20px;
   height: 2px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .navbar-toggler .navbar-toggler-icon:before { top: -6px; }
@@ -373,7 +373,7 @@ ul.navbar-nav > li > a {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
-  padding: 20px 15px !important;
+  padding: 18px 16px !important;
   line-height: 20px;
   transition: 350ms;
 }
@@ -402,7 +402,7 @@ ul.navbar-nav > li.active > a {
    Banner Carousel (Slider)
    ========================================================================== */
 .banner-carousel .banner-carousel-item {
-  height: 650px;
+  height: 620px;
   color: #fff;
   background-position: 50% 50%;
   background-size: cover;
@@ -417,13 +417,6 @@ ul.navbar-nav > li.active > a {
   width: 100%;
   height: 100%;
   background: rgba(15, 25, 35, 0.65);
-}
-
-@media (max-width: 991px) {
-  .banner-carousel .banner-carousel-item { height: 500px; }
-}
-@media (max-width: 575px) {
-  .banner-carousel .banner-carousel-item { height: 420px; }
 }
 
 .slider-content {
@@ -443,6 +436,7 @@ ul.navbar-nav > li.active > a {
   margin: 0 0 10px;
   font-weight: 700;
   text-transform: uppercase;
+  border-radius: 3px;
 }
 
 .slide-title {
@@ -452,9 +446,6 @@ ul.navbar-nav > li.active > a {
   color: #fff;
   margin: 15px 0 10px;
 }
-
-@media (max-width: 991px) { .slide-title { font-size: 22px; } }
-@media (max-width: 575px) { .slide-title { font-size: 16px; } }
 
 .slide-sub-title {
   font-style: normal;
@@ -467,15 +458,10 @@ ul.navbar-nav > li.active > a {
   letter-spacing: -1px;
 }
 
-@media (max-width: 991px) { .slide-sub-title { font-size: 40px; line-height: 44px; } }
-@media (max-width: 575px) { .slide-sub-title { font-size: 26px; line-height: 30px; } }
-
 .slider.btn {
   margin: 15px 6px 0;
   border: 2px solid transparent;
 }
-
-@media (max-width: 575px) { .slider.btn { font-size: 12px; padding: 10px 16px; } }
 
 .slider.border {
   background: none;
@@ -502,10 +488,6 @@ ul.navbar-nav > li.active > a {
   padding: 0;
   outline: 0;
   border: 0;
-}
-
-@media (max-width: 575px) {
-  .banner-carousel .carousel-control { display: none !important; }
 }
 
 .banner-carousel .slick-dots {
@@ -550,9 +532,11 @@ ul.navbar-nav > li.active > a {
    Software Trust Bar (Tech Stack Strip)
    ========================================================================== */
 .software-trust-bar {
-  background: #ffffff;
-  padding: 24px 0;
-  border-bottom: 1px solid #e8e8e8;
+  background: #f8fafc;
+  padding: 28px 0;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+  clear: both;
 }
 
 .software-label {
@@ -575,22 +559,19 @@ ul.navbar-nav > li.active > a {
   padding: 0;
 }
 
-@media (max-width: 991px) {
-  .software-badge-list { justify-content: flex-start; margin-top: 12px; }
-}
-
 .software-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #f4f6f8;
+  background: #ffffff;
   border: 1px solid #e2e8f0;
-  padding: 7px 14px;
+  padding: 8px 16px;
   border-radius: 4px;
   font-size: 12px;
   font-weight: 700;
   color: #1e293b;
   font-family: "Montserrat", sans-serif;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 
 .software-badge i {
@@ -598,19 +579,19 @@ ul.navbar-nav > li.active > a {
 }
 
 /* ==========================================================================
-   Call to Action Box
+   Call to Action Box (Clean Natural Flow, No Overlap)
    ========================================================================== */
 .call-to-action-box {
-  margin-top: -35px;
+  padding: 40px 0 0 0;
   position: relative;
-  z-index: 10;
+  clear: both;
 }
 
 .action-style-box {
   background: #ffb600;
-  padding: 28px 35px;
-  border-radius: 4px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .call-to-action-text .action-title {
@@ -619,10 +600,6 @@ ul.navbar-nav > li.active > a {
   margin: 0;
   color: #111;
   font-weight: 800;
-}
-
-@media (max-width: 767px) {
-  .call-to-action-text .action-title { font-size: 18px; line-height: 26px; }
 }
 
 /* ==========================================================================
@@ -644,11 +621,6 @@ ul.navbar-nav > li.active > a {
   line-height: 40px;
   margin: 0 0 25px;
   color: #212121;
-}
-
-@media (max-width: 575px) {
-  .ts-intro .into-sub-title,
-  .into-sub-title { font-size: 22px; line-height: 32px; }
 }
 
 .ts-service-box {
@@ -973,10 +945,6 @@ ul.navbar-nav > li.active > a {
   text-transform: uppercase;
 }
 
-@media (max-width: 575px) {
-  .contact-card-title { font-size: 24px; }
-}
-
 .contact-card-sub {
   font-size: 17px;
   color: #cbd5e1;
@@ -1135,9 +1103,214 @@ ul.navbar-nav > li.active > a {
   color: #fff;
 }
 
-/* Mobile Header Tweaks */
-@media (max-width: 991px) {
-  .header-one .logo-area { padding: 15px 0; }
-  .header-right { float: none; text-align: center; margin-top: 10px; }
-  .top-info-box { float: none; display: inline-block; }
+/* ==========================================================================
+   RESPONSIVE & MOBILE REFACTORING RULES (Max-Width: 991.98px & 767.98px)
+   ========================================================================== */
+@media (max-width: 991.98px) {
+  .header-main-bar {
+    padding: 12px 0;
+  }
+
+  .navbar-collapse {
+    background: #1e242b;
+    padding: 12px 0 18px;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  ul.navbar-nav > li > a {
+    padding: 12px 20px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  ul.navbar-nav > li:last-child > a {
+    border-bottom: 0;
+  }
+
+  .banner-carousel .banner-carousel-item {
+    height: 520px;
+  }
+
+  .slide-sub-title {
+    font-size: 38px;
+    line-height: 44px;
+  }
+
+  .slide-title {
+    font-size: 20px;
+  }
+
+  .software-badge-list {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* 1. Header Layout */
+  .mobile-call-bar {
+    padding: 6px 0 !important;
+    font-size: 12.5px !important;
+    font-weight: 700 !important;
+  }
+
+  .header-main-bar {
+    padding: 12px 0 !important;
+  }
+
+  .site-logo-text {
+    font-size: 1.15rem !important; /* ~18.4px */
+    white-space: nowrap !important;
+    margin: 0 !important;
+    font-weight: 800 !important;
+    color: #111827 !important;
+    letter-spacing: 0.3px !important;
+  }
+
+  .site-logo-text .text-accent {
+    color: #ffb600 !important;
+  }
+
+  .header-right {
+    display: none !important;
+  }
+
+  .navbar-toggler {
+    background: #111827 !important;
+    border: none !important;
+    padding: 8px 12px !important;
+    border-radius: 4px !important;
+  }
+
+  /* 2. Fix Overlap / Collision */
+  .call-to-action-box,
+  .action-style-box,
+  .banner-carousel,
+  .software-trust-bar {
+    position: relative !important;
+    top: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    transform: none !important;
+    clear: both !important;
+  }
+
+  .call-to-action-box {
+    padding: 20px 0 !important;
+  }
+
+  .action-style-box {
+    padding: 25px 18px !important;
+  }
+
+  .call-to-action-text .action-title {
+    font-size: 17px !important;
+    line-height: 24px !important;
+  }
+
+  /* 3. Software Chips */
+  .software-trust-bar {
+    padding: 20px 0 !important;
+    background: #f8f9fa !important;
+  }
+
+  .software-label {
+    font-size: 12px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .software-badge-list {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 8px !important;
+    padding-bottom: 4px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  .software-badge-list::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .software-badge {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    padding: 6px 12px !important;
+    font-size: 11.5px !important;
+    background: #ffffff !important;
+  }
+
+  /* 4. Hero Slider Polish */
+  .banner-carousel .banner-carousel-item {
+    height: auto !important;
+    min-height: 440px !important;
+    padding: 40px 15px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .banner-carousel .carousel-control {
+    display: none !important;
+  }
+
+  .slide-title-box {
+    font-size: 12px !important;
+    line-height: 26px !important;
+    padding: 0 10px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .slide-title {
+    font-size: 15px !important;
+    line-height: 22px !important;
+    margin: 8px 0 6px !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .slide-sub-title {
+    font-size: 24px !important;
+    line-height: 30px !important;
+    margin: 10px 0 18px !important;
+    font-weight: 800 !important;
+  }
+
+  .slider.btn {
+    height: 42px !important;
+    padding: 0 16px !important;
+    font-size: 12.5px !important;
+    margin: 6px 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 4px !important;
+  }
+
+  /* 5. Titles & Cards */
+  .section-sub-title {
+    font-size: 26px !important;
+    line-height: 34px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .into-sub-title {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+
+  .contact-card-title {
+    font-size: 22px !important;
+    line-height: 28px !important;
+  }
+
+  .contact-card-sub {
+    font-size: 14px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .contact-btn-group .btn {
+    width: 100% !important;
+    padding: 13px 20px !important;
+    font-size: 14px !important;
+  }
 }
